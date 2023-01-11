@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Sofia+Sans+Extra+Condensed:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #b3cde0;
+  height: 100vmax;
+  width: 100vmax;
+}
+
+header {
+  background-color: white;
+  height: 60px;
+  padding: 10px 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-family: "Lobster", cursive;
+  color: #192c53;
+}
+
+.mainnav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  background-color: #192c53;
+  height: 43px;
+}
+
+.mainnav a {
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+/* container de produtos */
+
+.produtos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  min-width: 1250px;
+  max-width: 1430px;
+  gap: 40px;
+  padding: 20px 10px 20px;
+}
+
+/* card de produto */
+
+.produto-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background-color: white;
+  border-radius: 4px;
+  height: 340px;
+  width: 220px;
+  padding: 10px 3px;
+}
+
+.produto-single img {
+  width: 93%;
+  height: 170px;
+  border-radius: 2px;
+}
+
+.produto-single h1 {
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-size: 26px;
+  text-align: center;
+  color: black;
+}
+
+.preco {
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-size: 30px;
+  color: #192c53;
+}
+
+.preco__parcelado {
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: #192c53;
+}
+
+.produto-single a {
+  text-decoration: none;
+}
+
+.btn__adicionacarrinho {
+  background-color: #192c53;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  width: 170px;
+  padding: 4px;
+  color: white;
+  border-radius: 7px;
+}
