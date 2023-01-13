@@ -1,3 +1,6 @@
+const containerProdutos = document.querySelector("#produtos");
+let carrinhoCliente = [];
+
 const items = [
   {
     id: 0,
@@ -67,8 +70,6 @@ const items = [
   },
 ];
 
-const containerProdutos = document.querySelector("#produtos");
-
 function inicializarLoja(produtos) {
   produtos.map((prod) => {
     containerProdutos.innerHTML += `
@@ -79,24 +80,20 @@ function inicializarLoja(produtos) {
           <p class="preco__parcelado">ou 12x de R$${(prod.preco / 12).toFixed(
             1
           )}</p>
-          <a key="${prod.id}" href="" class="btn__adicionacarrinho"
+          
+          <a value="${prod.id}" class="btn__adicionacarrinho"
             >Adicionar ao carrinho</a
           >`;
   });
 }
 
 inicializarLoja(items);
-const nav = document.querySelector(".mainnav");
+const barraNav = document.querySelector(".mainnav");
 
-nav.addEventListener("click", (e) => {
+barraNav.addEventListener("click", (e) => {
   aClicado = e.target.id;
   filtraPais(aClicado);
 });
-
-// const linkEuropa = document.querySelector("#filtra__europa");
-// const linkBrasil = document.querySelector("#filtra__brasil");
-// const linkSelecoes = document.querySelector("#filtra__selecoes");
-// const LinkResto = document.querySelector("#filtra__resto");
 
 function filtraPais(escolhido) {
   containerProdutos.innerHTML = "";
@@ -104,23 +101,4 @@ function filtraPais(escolhido) {
   inicializarLoja(filtradoPorPais);
 }
 
-var links = document.querySelectorAll(".btn__adicionacarrinho");
-
-// var carrinhoCliente = [];
-
-// for (var i = 0; i < links.length; i++) {
-//   links[i].addEventListener("click", function (e) {
-//     e.preventDefault();
-//     let chave = this.getAttribute("key");
-//     items[chave].QtdCarrinho++;
-//     carrinhoCliente.push(items[chave]);
-
-//     atualizarCarrinho();
-//   });
-// }
-
-function atualizarCarrinho() {
-  console.log(carrinhoCliente);
-  var containerCarrinho = document.querySelector("#carrinho");
-  containerCarrinho += ``;
-}
+containerProdutos.addEventListener("click", adicionaAoCarrinho);

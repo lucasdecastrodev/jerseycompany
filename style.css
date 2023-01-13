@@ -103,6 +103,7 @@ header h1 {
 
 .btn__adicionacarrinho {
   background-color: #192c53;
+  cursor: pointer;
   font-family: "Sofia Sans Extra Condensed", sans-serif;
   font-size: 24px;
   text-align: center;
