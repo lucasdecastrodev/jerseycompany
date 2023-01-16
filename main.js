@@ -70,6 +70,22 @@ const items = [
   },
 ];
 
+async function PegaProdutos() {
+  let url = "http://localhost:3000/items";
+  try {
+    let res = await fetch(url);
+    const produtosJson = await res.json();
+    console.log(produtosJson);
+    return produtosJson;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const listaProdutosViaApi = PegaProdutos();
+Promise.all(listaProdutosViaApi).then((res) => console.log(res));
+console.log(listaProdutosViaApi);
+
 function inicializarLoja(produtos) {
   produtos.map((prod) => {
     containerProdutos.innerHTML += `
@@ -87,7 +103,7 @@ function inicializarLoja(produtos) {
   });
 }
 
-inicializarLoja(items);
+inicializarLoja();
 const barraNav = document.querySelector(".mainnav");
 
 barraNav.addEventListener("click", (e) => {
