@@ -1,0 +1,19 @@
+{
+  "name": "jerseycompany",
+  "version": "1.0.0",
+  "description": "Jerseys sales website (",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasdecastrodev/jerseycompany.git"
+  },
+  "author": "Lucas de Castro Patrao Rezende Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasdecastrodev/jerseycompany/issues"
+  },
+  "homepage": "https://github.com/lucasdecastrodev/jerseycompany#readme"
+}
